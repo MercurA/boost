@@ -13,4 +13,7 @@ export class User {
 
     @Column()
     location: string;
+
+    @Column()
+    age: number;
 }

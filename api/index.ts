@@ -2,14 +2,15 @@ import "reflect-metadata";
 import { createConnection } from "typeorm";
 import http from './server/http';
 import {User} from './db/models/User';
+import 'dotenv/config'
 
 createConnection({
-    type: "postgres",
-    host: "localhost",
+    type: 'postgres',
+    host: process.env.TYPEORM_HOST,
     port: 5432,
-    username: "postgres",
-    password: "postgres",
-    database: "recipies_db",
+    username: process.env.TYPEORM_USERNAME,
+    password: process.env.TYPEORM_PASSWORD,
+    database: process.env.TYPEORM_DATABASE,
     entities: [
         User
     ],

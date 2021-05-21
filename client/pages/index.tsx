@@ -1,16 +1,13 @@
-import { Typography } from "@material-ui/core";
+import { ThemeProvider, Typography } from "@material-ui/core";
 import { FunctionComponent } from "react";
+
+import theme from "../utils/theme";
 
 const Home: FunctionComponent<Object> = () => {
   return (
-    <div>
-      <Typography
-        align="center"
-        variant="h5"
-      >
-        Test
-      </Typography>
-    </div>
+   <ThemeProvider theme={theme}>
+      {''}
+    </ThemeProvider>
   )
 }
 

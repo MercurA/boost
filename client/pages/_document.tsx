@@ -16,16 +16,15 @@ class MainDocument extends Document {
                         content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
                     />
                     <meta name="theme-color" content={theme.palette.primary.main} />
-                    <link
-                        rel="stylesheet"
-                        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
-                    />
+                    <link rel="preconnect" href="https://fonts.gstatic.com" />
+                    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet" />
                     <style jsx global>
                         {`
                             html,
                             body {
                                 height: 100%;
                                 width: 100%;
+                                font-family: 'Lora', serif;
                             }
                             *,
                             *:after,

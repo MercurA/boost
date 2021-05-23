@@ -1,9 +1,10 @@
-import { ThemeProvider, Typography } from "@material-ui/core";
+import React from 'react';
+import { ThemeProvider } from "@material-ui/core";
 import { FunctionComponent } from "react";
 
 import theme from "../utils/theme";
 
-const Home: FunctionComponent<Object> = () => {
+const Home: FunctionComponent<unknown> = () => {
   return (
    <ThemeProvider theme={theme}>
       {''}

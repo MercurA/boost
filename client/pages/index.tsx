@@ -7,7 +7,7 @@ import theme from "../utils/theme";
 const Home: FunctionComponent<unknown> = () => {
   return (
    <ThemeProvider theme={theme}>
-      {''}
+      {'TEST'}
     </ThemeProvider>
   )
 }

@@ -15,8 +15,9 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx}": [
-      "eslint '*/**/*.{ts,tsx}' --fix"
+    "*.{ts,tsx}": [
+      "eslint '*/**/*.{ts,tsx}' --fix",
+      "git add"
     ]
   },
   "dependencies": {

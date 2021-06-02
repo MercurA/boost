@@ -1,40 +1,17 @@
-import { makeStyles } from "@material-ui/core";
 import { FunctionComponent } from "react";
 import Image from 'next/image';
-
-const useStyles = makeStyles((theme) => ({
-    container: {
-        height: 400,
-        width: 600,
-        boxShadow: '0px 0px 7px -2px',
-        borderRadius: '5px',
-        margin: '0 auto',
-        display: 'flex',
-        padding: '0 100px',
-        fontFamily: 'Lora'
-    },
-    imageContainer: {
-        textAlign: 'center',
-        marginTop: 45
-    },
-    title: {
-        position: 'absolute',
-        textAlign: 'center',
-        marginTop: 10
-    }
-}))
+import style from './Style.module.scss'
 
 interface IRecipeCard {
     title: string
 }
 
 const RecipeCard: FunctionComponent<IRecipeCard> = ({title}) => {
-    const classes = useStyles();
 
     return (
-        <div className={classes.container}>
-            <div className={classes.title}>{title}</div>
-            <div className={classes.imageContainer}>
+        <div className={style.container}>
+            <div className={style.title}>{title}</div>
+            <div className={style.imageContainer}>
                 <Image 
                     src={'/images/food.jpg'} 
                     width={400}

@@ -10,7 +10,8 @@ const theme = createMuiTheme({
             light: 'FFBF69',
             main: '#FF9F1C'
         }
-    }
+    },
+    
 })
 
 export default theme;

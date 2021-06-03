@@ -1,13 +1,13 @@
 import React from 'react';
-import { ThemeProvider } from "@material-ui/core";
 import { FunctionComponent } from "react";
 
-import theme from "../utils/theme";
+import RecipeCard from './components/recipie-card/RecipieCard';
 
 const Home: FunctionComponent<unknown> = () => {
   return (
-   <ThemeProvider theme={theme}>
-    </ThemeProvider>
+    <>
+      <RecipeCard title="Some title" />
+    </>
   )
 }
 

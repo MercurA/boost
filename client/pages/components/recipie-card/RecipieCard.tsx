@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from "react";
 import style from './Style.module.scss'
 import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined';
+
 const mockUserData = {
     name: 'Ema',
     tags: ['Mediteranian', 'Shrimp']

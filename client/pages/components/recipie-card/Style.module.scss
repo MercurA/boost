@@ -1,8 +1,10 @@
+@import url('../../../utils/styleConstants.scss');
+
 .cardContainer {
   border-radius: 5px;
   box-shadow: 0px 0px 7px -2px;
   cursor: pointer;
-  font-family: 'Lora';
+  font-family: $lora;
   height: 600px;
   margin: 0 auto;
   position: relative;

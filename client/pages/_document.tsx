@@ -18,6 +18,8 @@ class MainDocument extends Document {
                     <meta name="theme-color" content={theme.palette.primary.main} />
                     <link rel="preconnect" href="https://fonts.gstatic.com" />
                     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet" />
+                    <link rel="preconnect" href="https://fonts.gstatic.com" />
+                    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,700;1,300;1,700&display=swap" rel="stylesheet"/>
                     <style jsx global>
                         {`
                             html,

@@ -1,0 +1,39 @@
+@import '../../../utils/styleConstants.scss';
+
+.cardContainer {
+  border-radius: 5px;
+  box-shadow: 0px 0px 7px -2px;
+  cursor: pointer;
+  font-family: $lora;
+  height: 600px;
+  margin: 0 auto;
+  position: relative;
+  width: 1030px;
+  .userContainer {
+    display: flex;
+    font-size: 1.3rem;
+    left: 20px;
+    line-height: 1.2;
+    justify-content: space-evenly;
+    top: 10px;
+    position: absolute;
+    width: 80px;
+  }
+  .innerContainer {
+    height: 100%;
+    margin: 0 auto;
+    width: 800px;
+  }
+  .title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    height: 44px;
+    padding-top: 20px;
+    text-align: center;
+  }
+  .imageContainer {
+    height: 450px;
+    margin-top: 20px;
+    width: 800px;
+  }
+}

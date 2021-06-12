@@ -6,7 +6,7 @@ import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles'
 const theme = responsiveFontSizes(createMuiTheme());
 
 class MainDocument extends Document {
-    public render() {
+    public render(): JSX.Element {
         return (
             <Html>
                 <Head>
@@ -16,16 +16,17 @@ class MainDocument extends Document {
                         content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
                     />
                     <meta name="theme-color" content={theme.palette.primary.main} />
-                    <link
-                        rel="stylesheet"
-                        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
-                    />
+                    <link rel="preconnect" href="https://fonts.gstatic.com" />
+                    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet" />
+                    <link rel="preconnect" href="https://fonts.gstatic.com" />
+                    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,700;1,300;1,700&display=swap" rel="stylesheet"/>
                     <style jsx global>
                         {`
                             html,
                             body {
                                 height: 100%;
                                 width: 100%;
+                                font-family: 'Lora', serif;
                             }
                             *,
                             *:after,

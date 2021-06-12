@@ -1,16 +1,9 @@
-import { Typography } from "@material-ui/core";
+import React from 'react';
 import { FunctionComponent } from "react";
 
-const Home: FunctionComponent<Object> = () => {
+const Home: FunctionComponent<unknown> = () => {
   return (
-    <div>
-      <Typography
-        align="center"
-        variant="h5"
-      >
-        Test
-      </Typography>
-    </div>
+    <></>
   )
 }
 

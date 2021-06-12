@@ -5886,7 +5886,7 @@
   "resolved" "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz"
   "version" "0.0.6"
 
-"typeorm@^0.2.7":
+"typeorm@^0.2.34", "typeorm@^0.2.7":
   "integrity" "sha512-FZAeEGGdSGq7uTH3FWRQq67JjKu0mgANsSZ04j3kvDYNgy9KwBl/6RFgMVgiSgjf7Rqd7NrhC2KxVT7I80qf7w=="
   "resolved" "https://registry.npmjs.org/typeorm/-/typeorm-0.2.34.tgz"
   "version" "0.2.34"

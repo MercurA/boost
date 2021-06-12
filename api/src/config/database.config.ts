@@ -9,7 +9,7 @@ if(result.error) {/* do nothing */}
 export const DatabaseConfig = {
     type: 'postgres' as any,
     driver: 'postgres',
-    database: process.env.TYPEORM_DATABASE || 'recipie_db',
+    database: process.env.TYPEORM_DATABASE || 'recipies_db',
     port: parseInt(process.env.TYPEORM_PORT) || 5432,
     username: process.env.TYPEORM_USERNAME,
     password: process.env.TYPEORM_PASSWORD,

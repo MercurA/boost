@@ -14,10 +14,10 @@ export class UsersController {
 
     @Post()
     addUser(@Request() req): Promise<User> {
-        const body: CreateUserDto = { 
-            name: req.body.name,
-            location: req.body.location
+        const recipieBody: CreateUserDto = { 
+            name: req.body.recipe.name,
+            location: req.body.recipe.location
         }
-        return this.userService.create(body);
+        return this.userService.create(recipieBody);
     }
 }

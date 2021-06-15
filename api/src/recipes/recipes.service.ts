@@ -24,6 +24,7 @@ export class RecipesService {
         ingredients.unit = ingredientsDto.unit;
         ingredients.value = ingredientsDto.value;
         // initialy save the ingrredients so we can create realation with recipe
+        // TODO treat the use case if ingredients is an array
         const newIngred = await this.ingredientsRepository.save(ingredients);
 
         recipe.name = recipesDto.name;

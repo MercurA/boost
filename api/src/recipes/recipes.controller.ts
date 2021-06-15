@@ -14,16 +14,15 @@ export class RecipesController {
             name: req.body.recipe.name
         }
         const ingredBody: IngredientDto = {
-            name: req.body.ingredient.name,
-            value: req.body.ingredient.value,
-            unit: req.body.ingredient.unit
+            name: req.body.ingredients.name,
+            value: req.body.ingredients.value,
+            unit: req.body.ingredients.unit
         }
         return this.recipesService.create(recipeBody, ingredBody);
     }
 
     @Get(':id')
     findOne(@Param('id') id: string): Promise<Recipe> {
-        console.log(id)
         return this.recipesService.findOne(Number(id));
     }
 }

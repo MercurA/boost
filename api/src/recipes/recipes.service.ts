@@ -19,12 +19,15 @@ export class RecipesService {
         const recipe = new Recipe();
         const ingredients = new Ingredients();
         
+        
         ingredients.name = ingredientsDto.name;
         ingredients.unit = ingredientsDto.unit;
-        ingredients.value - ingredientsDto.value;
+        ingredients.value = ingredientsDto.value;
+        // initialy save the ingrredients so we can create realation with recipe
+        const newIngred = await this.ingredientsRepository.save(ingredients);
 
         recipe.name = recipesDto.name;
-        recipe.ingedients = [ingredients];
+        recipe.ingedients = [newIngred];
         const newRecipe = await this.recipesRepository.save(recipe);
 
         return newRecipe;

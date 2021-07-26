@@ -6,19 +6,15 @@ import { RecipesService } from "./recipes.service";
 
 @Controller('recipes')
 export class RecipesController {
-    constructor(private readonly recipesService: RecipesService) {}
+    constructor(private readonly recipesService: RecipesService) { }
 
     @Post()
     addRecipe(@Request() req): Promise<Recipe> {
         const recipeBody: RecipeDto = {
             name: req.body.recipe.name
         }
-        const ingredBody: IngredientDto = {
-            name: req.body.ingredients.name,
-            value: req.body.ingredients.value,
-            unit: req.body.ingredients.unit
-        }
-        return this.recipesService.create(recipeBody, ingredBody);
+        
+        return this.recipesService.create(recipeBody, req.body.ingredients);
     }
 
     @Get(':id')

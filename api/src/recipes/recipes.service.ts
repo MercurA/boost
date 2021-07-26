@@ -15,20 +15,21 @@ export class RecipesService {
         private readonly ingredientsRepository: Repository<Ingredients>
     ){}
 
-    async create(recipesDto: RecipeDto, ingredientsDto: IngredientDto): Promise<Recipe> {
+    async create(recipesDto: RecipeDto, ingredientsDto: IngredientDto[]): Promise<Recipe> {
         const recipe = new Recipe();
         const ingredients = new Ingredients();
         
-        
-        ingredients.name = ingredientsDto.name;
-        ingredients.unit = ingredientsDto.unit;
-        ingredients.value = ingredientsDto.value;
+        const newIngred = ingredientsDto.map(el => {
+            ingredients.name = el.name;
+            ingredients.unit = el.unit;
+            ingredients.value = el.value;
+        })
         // initialy save the ingrredients so we can create realation with recipe
         // TODO treat the use case if ingredients is an array
-        const newIngred = await this.ingredientsRepository.save(ingredients);
+        await this.ingredientsRepository.save(newIngred);
 
         recipe.name = recipesDto.name;
-        recipe.ingedients = [newIngred];
+        recipe.ingedients = [newIngred;
         const newRecipe = await this.recipesRepository.save(recipe);
 
         return newRecipe;
